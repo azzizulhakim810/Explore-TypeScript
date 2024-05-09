@@ -35,3 +35,6 @@ console.log(eligibleRollList);
 let coordinates: [number, number] = [1, 5];
 
 let ageName: [number, string, boolean] = [50, "Jim", true];
+
+ageName[0].push("jim");
+console.log(ageName);
