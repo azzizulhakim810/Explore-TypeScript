@@ -27,14 +27,8 @@ let friends: string[] = ["Ali", "Ajoy", "Shourov", "Masud"];
 
 let eligibleRollList: number[] = [4, 7, 8];
 
-eligibleRollList.push(5);
-console.log(eligibleRollList);
-
 // tuple(Speacial type of array) --> array --> order --> type of values
 
 let coordinates: [number, number] = [1, 5];
 
 let ageName: [number, string, boolean] = [50, "Jim", true];
-
-ageName[0].push("jim");
-console.log(ageName);
