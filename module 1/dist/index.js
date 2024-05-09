@@ -21,5 +21,13 @@ var eligibleRollList = [4, 7, 8];
 // tuple(Speacial type of array) --> array --> order --> type of values
 var coordinates = [1, 5];
 var ageName = [50, "Jim", true];
-ageName[0] = 20;
-console.log(ageName);
+// Reference Type --> Object
+/* let user: {
+  firstName: "Azzizul";
+  lastName: "Hakim";
+}; */
+var user = {
+    firstName: "Azzizul",
+    lastName: "Hakim",
+};
+console.log(user);
