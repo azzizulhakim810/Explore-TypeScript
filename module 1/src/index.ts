@@ -52,4 +52,4 @@ let user: {
   lastName: "Hakim",
 }; */
 
-console.log(user);
+// console.log(user);
