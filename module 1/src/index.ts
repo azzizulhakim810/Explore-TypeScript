@@ -37,7 +37,8 @@ let ageName: [number, string, boolean] = [50, "Jim", true];
 
 let user: {
   firstName: "Azzizul";
-  lastName: "Hakim";
+  middleName: "Hakim";
+  lastName: "Jim";
 };
 
 /* let user: {
