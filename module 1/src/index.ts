@@ -35,13 +35,13 @@ let ageName: [number, string, boolean] = [50, "Jim", true];
 
 // Reference Type --> Object
 
-let user: {
+/* let user: {
   firstName: "Azzizul";
   middleName: "Hakim";
   lastName: "Jim";
-};
+}; */
 
-/* let user: {
+let user: {
   readonly company: string; // Can't change
   // company: "Peacock India"; //Explicitly fixed the name
   firstName: string;
@@ -51,6 +51,6 @@ let user: {
   company: "PH",
   firstName: "Azzizul",
   lastName: "Hakim",
-}; */
+};
 
 // console.log(user);
