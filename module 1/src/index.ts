@@ -129,7 +129,15 @@
   } = person;
 
   // Array
-  const myFriends = ["Masud", "Ali", "Firoz", "Ajoy", "Zaman", "Mahin"];
+  const myFriends = [
+    "Masud",
+    "Ali",
+    "Firoz",
+    "Ajoy",
+    "Zaman",
+    "Mahin",
+    "Maruf",
+  ];
 
   // const [a, b, c, d, e, f] = myFriends;
   const [, , MarriedOne, ...rest] = myFriends;
