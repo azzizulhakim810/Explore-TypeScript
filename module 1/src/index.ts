@@ -138,6 +138,7 @@
     "Mahin",
     "Maruf",
     "Shanto",
+    "Kiron",
   ];
 
   // const [a, b, c, d, e, f] = myFriends;
