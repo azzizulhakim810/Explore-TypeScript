@@ -260,3 +260,249 @@
 
   // console.log(student1, student2);
 }
+
+// 2.6 --------------------------
+{
+  //
+  // Constraints In typescript
+  const addCourseToStudent = <
+    T extends { id: number; name: string; email: string }
+  >(
+    student: T
+  ) => {
+    //extends mean to must have these three property to every property
+    const course = "Next Level Web Dev";
+
+    return {
+      ...student,
+      course,
+    };
+  };
+
+  const student1 = addCourseToStudent({
+    id: 47,
+    name: "x",
+    email: "x@gmail.com",
+    devType: "NLWD",
+  });
+
+  const student2 = addCourseToStudent({
+    id: 48,
+    name: "y",
+    email: "y@gmail.com",
+    hasJob: true,
+  });
+
+  // console.log(student1, student2);
+  //
+}
+
+// 2.7 --------------------------
+{
+  // Constraints with keyof
+  type Vehicle = {
+    bike: string;
+    car: string;
+    ship: string;
+  };
+
+  type Owner = "bike" | "car" | "ship"; // manually
+  type Owner2 = keyof Vehicle; // using keyof
+
+  const person: Owner = "bike";
+  const person2: Owner2 = "ship";
+
+  const getPropertyValue = <X, Y extends keyof X>(obj: X, key: Y) => {
+    return obj[key];
+  };
+
+  const user = {
+    name: "Azzizul",
+    age: 24,
+    address: "dhk",
+  };
+
+  const result = getPropertyValue(user, "name");
+  // console.log(result);
+  //
+}
+
+// 2.8 --------------------------
+{
+  // Promise
+  type Todo = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  };
+  const getTodo = async (): Promise<Todo> => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const data: Todo = await res.json();
+    return data;
+    // console.log(data);
+  };
+
+  getTodo();
+
+  /*   const createPromise = (): Promise<string> => {
+    return new Promise<string>((resolve, reject) => {
+      const data: string = "something";
+      if (data) {
+        resolve(data);
+      } else {
+        reject("failed to load data");
+      }
+    });
+  }; */
+
+  const createPromise = (): Promise<string> => {
+    return new Promise<string>((resolve, reject) => {
+      const data: string = "something";
+      if (data) {
+        resolve(data);
+      } else {
+        reject("failed to load data");
+      }
+    });
+  };
+
+  // Call Promise
+  const showData = async (): Promise<string> => {
+    const data: string = await createPromise();
+    return data;
+    // console.log(data);
+  };
+
+  showData();
+
+  type Something = {
+    something: string;
+  };
+
+  const createPromise2 = (): Promise<Something> => {
+    return new Promise<Something>((resolve, reject) => {
+      const data: Something = { something: "something" };
+      if (data) {
+        resolve(data);
+      } else {
+        reject("failed to load data");
+      }
+    });
+  };
+  // Call Promise
+  const showData2 = async (): Promise<Something> => {
+    const data: Something = await createPromise2();
+    return data;
+    // console.log(data);
+  };
+
+  showData2();
+  //
+}
+
+// 2.9 --------------------------
+{
+  // Conditional Type
+  type Sheikh = {
+    car: string;
+    bike: string;
+    plane: string;
+    cycle: string;
+  };
+
+  type CheckVehicle<T> = T extends keyof Sheikh ? true : false;
+
+  type HasPlane = CheckVehicle<"plane">;
+}
+
+// 2.9 --------------------------
+{
+  // Mapped Types
+  const arrayOfNumbers: number[] = [1, 2, 3];
+  // const arrayOfStrings: string[] = ['1', '2', '3'];
+
+  const arrayOfStrings: string[] = arrayOfNumbers.map((number) =>
+    number.toString()
+  );
+  // console.log(arrayOfStrings);
+
+  type AreaNumber = {
+    height: number;
+    width: number;
+  };
+
+  //  type AreaString = {
+  //   height: string;
+  //   width: string;   };
+
+  //   type AreaString = {
+  //  [key in keyof AreaNumber]: string; };
+
+  type Height = AreaNumber["height"]; // look up type
+
+  // T => {height: string; width: number}
+  // key => T["width"];
+
+  // Implement Map Type -> key in
+  type AreaString<T> = {
+    [key in keyof T]: T[key];
+  };
+
+  const area1: AreaString<{ height: string; width: number }> = {
+    height: "20",
+    width: 20,
+  };
+}
+
+// 2.10 --------------------------
+{
+  // Utility Types
+
+  type Person = {
+    name: string;
+    age: number;
+    salary: number;
+    contact?: number;
+  };
+
+  // Pick
+  type NameAndSalary = Pick<Person, "name" | "salary">;
+
+  // Omit
+  type ContactINfo = Omit<Person, "name" | "age" | "salary">;
+
+  // Required
+  type PersonRequired = Required<Person>;
+
+  // Partial
+  type PersonPartial = Partial<Person>;
+
+  // Read Only
+  type PersonReadOnly = Readonly<Person>;
+  const person1: PersonReadOnly = {
+    name: "Azzizul",
+    age: 24,
+    salary: 1000000,
+  };
+
+  // person1.name = "Jim"; // Can't change any readonly value
+
+  // Record Type
+  /* 
+ type MyObj = {
+    a: string;
+    b: string;
+  }; 
+  */
+
+  type MyObj = Record<string, string>;
+
+  const emptyObj: Record<string, unknown> = {}; // An Empty object but assign the key always be a string
+
+  const obj1: MyObj = {
+    a: "a",
+    b: "b",
+    c: "c",
+  };
+}
