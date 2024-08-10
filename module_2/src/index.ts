@@ -117,7 +117,9 @@
   const boolArray: GenericsArray<boolean> = [true, false, true];
 
   // On Array of Object
-  const user: GenericsArray<{ name: string; age: number }> = [
+  type User = { name: string; age: number };
+  // const user: GenericsArray<{ name: string; age: number }> = [
+  const user: GenericsArray<User> = [
     {
       name: "Azzizul",
       age: 24,
