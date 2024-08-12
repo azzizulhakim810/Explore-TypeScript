@@ -3,19 +3,19 @@
 
   class Person {
     getSleep() {
-      // console.log(`I'm sleeping for 8 hours per day`);
+      console.log(`I'm sleeping for 8 hours per day`);
     }
   }
 
   class Student extends Person {
     getSleep() {
-      // console.log(`I'm sleeping for 7 hours per day`);
+      console.log(`I'm sleeping for 7 hours per day`);
     }
   }
 
   class Developer extends Person {
     getSleep() {
-      // console.log(`I'm sleeping for 6 hours per day`);
+      console.log(`I'm sleeping for 6 hours per day`);
     }
   }
 
@@ -39,6 +39,7 @@
     }
   }
 
+  // PI * r * r
   class Circle extends Shape {
     radius: number;
 
@@ -69,7 +70,7 @@
   }
 
   const getShapeArea = (param: Shape) => {
-    // console.log(param.getArea());
+    console.log(param.getArea());
   };
 
   // Make instance

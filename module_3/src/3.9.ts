@@ -11,13 +11,13 @@
   // Real Implementation
   class Car1 implements Vehicle1 {
     startEngine(): void {
-      // console.log(`I am starting the car engine`);
+      console.log(`I am starting the car engine`);
     }
     stopEngine(): void {
-      // console.log(`I am stoping the car engine`);
+      console.log(`I am stoping the car engine`);
     }
     move(): void {
-      // console.log(`I am moving the car `);
+      console.log(`I am moving the car `);
     }
     test() {
       // console.log(`I am just testing`);
@@ -25,7 +25,9 @@
   }
 
   const toyotaCar = new Car1();
-  toyotaCar.startEngine();
+  // toyotaCar.startEngine();
+  // toyotaCar.stopEngine();
+  // toyotaCar.move();
 
   // Abstract Class (leader class)
   // idea
@@ -33,6 +35,7 @@
     abstract startEngine(): void;
     abstract stopEngine(): void;
     abstract move(): void;
+    // test is not abstract, it's inherited
     test() {
       // console.log(`I am just testing`);
     }
@@ -41,18 +44,20 @@
   // implementation
   class ToyotaCar extends Car2 {
     startEngine(): void {
-      // console.log(`I am starting the car engine`);
+      console.log(`I am starting the car engine`);
     }
     stopEngine(): void {
-      // console.log(`I am stoping the car engine`);
+      console.log(`I am stoping the car engine`);
     }
     move(): void {
-      // console.log(`I am moving the car `);
+      console.log(`I am moving the car `);
     }
   }
 
-  // const hondaCar = new Car2();
-  // hondaCar.stopEngine();
+  const hondaCar = new ToyotaCar();
+  hondaCar.startEngine();
+  hondaCar.stopEngine();
+  hondaCar.move();
 
   //
 }
