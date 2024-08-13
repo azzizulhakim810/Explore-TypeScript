@@ -481,7 +481,7 @@
   // Read Only
   type PersonReadOnly = Readonly<Person>;
   const person1: PersonReadOnly = {
-    name: "Azzizul",
+    name: "AH JIM",
     age: 24,
     salary: 1000000,
   };
