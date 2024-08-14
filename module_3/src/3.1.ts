@@ -27,6 +27,9 @@
   const dog = new Animal("kitty", "dog", "Ghew Ghew");
   const cat = new Animal("Picky", "cat", "Mew Mew");
 
-  dog.makeSound();
-  cat.makeSound();
+  const soundOfDog = dog.makeSound();
+  const soundOfCat = cat.makeSound();
+
+  console.log(soundOfCat);
+  console.log(soundOfDog);
 }
