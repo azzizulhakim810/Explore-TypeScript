@@ -30,7 +30,7 @@
       // this.age = age;
       // this.address = address;
 
-      // Call method to pass the agrs to parent -> super(all arguments)
+      // Call "super" method to pass all the agrs to parent -> super(all arguments)
       super(name, age, address);
     }
 
@@ -45,6 +45,7 @@
     // name: string;
     // age: number;
     // address: string;
+    // write down only the extra one
     designation: string;
 
     constructor(
@@ -65,7 +66,7 @@
     }
   }
 
-  const teacher = new Teacher("Mr. Jim", 24, "dhk", "Professor");
+  const teacher = new Teacher("Mr. Azzizul", 24, "Dhaka", "Professor");
 
   student.getSleep(5);
   teacher.getSleep(5);
