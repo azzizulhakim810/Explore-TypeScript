@@ -20,7 +20,7 @@
       console.log(`I am moving the car `);
     }
     test() {
-      // console.log(`I am just testing`);
+      console.log(`I am just testing`);
     }
   }
 

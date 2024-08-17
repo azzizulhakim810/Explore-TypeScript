@@ -22,12 +22,6 @@
       return (Counter.count = Counter.count - 1);
     }
   }
-  /* 
-  const instance1 = new Counter();
-  console.log(Counter.increment());
-
-  const instance2 = new Counter();
-  console.log(Counter.increment()); */
 
   const instance1 = new Counter();
   // As we made the method "Static", so we  have to put the class name before calling the method
