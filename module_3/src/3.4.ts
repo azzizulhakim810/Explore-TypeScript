@@ -71,11 +71,11 @@
 
   getAnimal(dog);
 
-  /*   
+
   dog.makeBarking();
   dog.makeSound();
 
   cat.makeMeawing();
   cat.makeSound(); 
-*/
+
 }

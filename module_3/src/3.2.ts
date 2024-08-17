@@ -66,7 +66,7 @@
     }
   }
 
-  const teacher = new Teacher("Mr. Azzizul", 24, "Dhaka", "Professor");
+  const teacher = new Teacher("Mr. AH JIM", 24, "Dhaka", "Professor");
 
   student.getSleep(5);
   teacher.getSleep(5);
