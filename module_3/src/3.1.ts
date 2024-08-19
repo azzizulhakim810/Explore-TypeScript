@@ -24,12 +24,15 @@
   }
 
   // Make instanceof dog & cat
-  const dog = new Animal("kitty", "dog", "Ghew Ghew");
-  const cat = new Animal("Picky", "cat", "Mew Mew");
+  const dog = new Animal("Doggy", "dog", "Ghew Ghew");
+  const cat = new Animal("Kitty", "cat", "Mew Mew");
+  const pikachu = new Animal("Pikachu", "pokemon", "Pika Pika");
 
   const soundOfDog = dog.makeSound();
   const soundOfCat = cat.makeSound();
+  const soundOfPikachu = pikachu.makeSound();
 
   console.log(soundOfCat);
   console.log(soundOfDog);
+  console.log(soundOfPikachu);
 }
