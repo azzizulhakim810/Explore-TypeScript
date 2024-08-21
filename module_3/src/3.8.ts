@@ -75,8 +75,8 @@
 
   // Make instance
   const shape1 = new Shape();
-  const shape2 = new Circle(5);
-  const shape3 = new Rectangle(5, 10);
+  const shape2 = new Circle(10);
+  const shape3 = new Rectangle(2, 5);
 
   getShapeArea(shape1);
   getShapeArea(shape2);
