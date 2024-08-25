@@ -29,7 +29,7 @@
     }
   }
 
-  const poorAccount = new BankAccount(1, "Mr. Jim", 5000);
+  const poorAccount = new BankAccount(1, "Mr. Jim", 500);
   poorAccount.addDeposit(200);
   const myBalace = poorAccount.getBalance();
   console.log(myBalace);
