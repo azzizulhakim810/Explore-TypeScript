@@ -68,7 +68,7 @@
 
   const teacher = new Teacher("Mr. AH JIM", 24, "Dhaka", "Professor");
 
-  student.getSleep(3);
-  teacher.getSleep(5);
-  teacher.takeClass(10);
+  student.getSleep(5);
+  teacher.getSleep(10);
+  teacher.takeClass(20);
 }
