@@ -33,8 +33,8 @@
     }
   }
 
-  const poorAccount = new BankAccount(1, "Azzizul", 500);
-  poorAccount.deposit = 100; // Call function as property
+  const poorAccount = new BankAccount(1, "Azzizul", 100);
+  poorAccount.deposit = 500; // Call function as property
   const myBalace = poorAccount.balance; // Call function as property
   console.log(myBalace);
 
