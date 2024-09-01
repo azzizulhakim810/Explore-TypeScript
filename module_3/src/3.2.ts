@@ -70,5 +70,5 @@
 
   student.getSleep(10);
   teacher.getSleep(15);
-  teacher.takeClass(20);
+  teacher.takeClass(30);
 }
