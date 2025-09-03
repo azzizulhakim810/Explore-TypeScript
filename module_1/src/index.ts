@@ -39,7 +39,7 @@
 {
   // Reference Type --> Object
 
-  /*   let user: {
+  /* let user: {
   firstName: "Azzizul";
   middleName: "Hakim";
   lastName: "Jim";
@@ -47,7 +47,7 @@
 
   let user: {
     readonly company: string; // Can't change
-    // company: "Peacock India"; //Explicitly fixed the name[type--> literal type]
+    // company: "Peacock India"; //Explicitly fixed the name [type--> literal type]
     firstName: string;
     middleName?: string; // Optional
     lastName: string;
@@ -91,6 +91,14 @@
 // 1.7 --------------------------
 {
   // Spread Operator ------------------------------- Split a single one to different parts
+
+  // ARRAY Case
+  const bros1: string[] = ["Semmon", "Hridoy", "Saiful Bhai"];
+  const bros2: string[] = ["Shogor Bhai", "Hamza", "Mahim"];
+
+  bros1.push(...bros2);
+
+  // OBJECT Case
   const breakfast = {
     bread: "2 pieces",
     butter: "100 gm",
@@ -243,7 +251,7 @@
     // Ternary Operator || Optional Chaining || Nullish Coalescing Operator
     const age: number = 15;
     const isAdult = age >= 18 ? "Adult" : "Not Adult";
-    // console.log({ isAdult });
+    console.log({ isAdult });
   }
 
   {
@@ -282,7 +290,7 @@
     };
 
     const permanentAddress =
-      user?.address?.permanentAddress ?? "No permanent address"; // Using nullish coalesce for controliing null or undefined value
+      user?.address?.permanentAddress ?? "No Permanent Address"; // Using nullish coalesce for controliing null or undefined value
     // console.log(permanentAddress);
   }
 
@@ -294,9 +302,9 @@
       // }
 
       if (value) {
-        console.log("Searching");
+        // console.log("Searching");
       } else {
-        console.log("Nothing to search");
+        // console.log("Nothing to search");
       }
     };
 
@@ -306,14 +314,14 @@
     const getSpeedinMeterPerSecond = (value: unknown) => {
       if (typeof value === "number") {
         const convertedSpeed = (value * 1000) / 3600;
-        console.log(`The speed is ${convertedSpeed} ms^-1`);
+        // console.log(`The speed is ${convertedSpeed} ms^-1`);
       } else if (typeof value === "string") {
         // const splitValue = value.split(" ");
         const [v, unit] = value.split(" ");
         const convertedSpeed = (parseFloat(v) * 1000) / 3600;
-        console.log(`The speed is ${convertedSpeed} ms^-1`);
+        // console.log(`The speed is ${convertedSpeed} ms^-1`);
       } else {
-        console.log("Provide a valid Number");
+        // console.log("Provide a valid Number");
       }
     };
 
