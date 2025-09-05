@@ -12,6 +12,7 @@
 
   const result1 = kgToGm("100") as string;
   const result2 = kgToGm(100) as number;
+  const result3 = kgToGm(true) as number;
   // console.log(result2);
 
   // Showed by try catch block
