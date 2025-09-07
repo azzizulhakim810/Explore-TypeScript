@@ -42,6 +42,8 @@
     age: number;
   }
 
+  // we can declare any object using interface or typeAlias but primitive data must be declared using typeAlias
+
   /* 
   const user: User1 = {
     name: "Jim",
@@ -64,6 +66,7 @@
   };
 
   // extending object property using extends with interface
+  // We can easily extend interface as well as type (user1)
   interface UserWithRole2 extends User1 {
     role: string;
   }
@@ -81,13 +84,15 @@
   // js --> object, array --> object, function --> object
 
   // On Array
-  type Roll1 = number[];
+  type Roll1 = number[]; // using type alias
 
+  // using interface
   interface Roll2 {
     [index: number]: number; // Indexing
   }
 
   const rollNumber1: Roll1 = [1, 2, 3];
+  // 0  1  2 index as number
   const rollNumber2: Roll2 = [1, 2, 3];
 
   // On Function
