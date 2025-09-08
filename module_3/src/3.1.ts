@@ -17,7 +17,7 @@
       // this.sound = sound;     '' '' '' ''
     }
 
-    // Create a method
+    // Create a method (Annonymous Function)
     makeSound() {
       console.log(`The ${this.name} says ${this.sound}`);
     }
